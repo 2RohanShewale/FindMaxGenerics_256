@@ -5,10 +5,10 @@ namespace FindMaxGenericsTest
     {
         FindMaxGeneric doubleMax = new FindMaxGeneric();
         [Test]
-        public void MaximumInt_WhenFirstGivenValueIsMax()
+        public void MaximumDouble_WhenFirstGivenValueIsMax()
         {
-            double result = doubleMax.FindMaximum<double>(13.1, 11.03, 11.01);
-            Assert.AreEqual(13.1, result);
+            double result = doubleMax.FindMaximum<double>(15.1, 11.03, 11.01);
+            Assert.AreEqual(15.1, result);
             Assert.Pass();
         }
     }
