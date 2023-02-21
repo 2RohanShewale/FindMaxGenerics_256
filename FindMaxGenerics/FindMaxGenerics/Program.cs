@@ -10,8 +10,8 @@ namespace FindMaxGenerics
     {
         static void Main(string[] args)
         {
-            FindMax intMax = new FindMax();
-            Console.WriteLine($"Maximum Int : {intMax.FindMaximum(40,50,60)}");
+            FindMax doubleMax = new FindMax();
+            Console.WriteLine($"Maximum Int : {doubleMax.FindMaximum(40.4,50.4,60.5)}");
             Console.ReadKey();
         }
     }

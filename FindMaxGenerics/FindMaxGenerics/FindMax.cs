@@ -2,7 +2,7 @@
 {
     public class FindMax
     {
-        public int FindMaximum(int firstValue, int secondValue, int thirdValue)
+        public double FindMaximum(double firstValue, double secondValue, double thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
                 return firstValue;

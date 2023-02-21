@@ -1,7 +1,7 @@
 using FindMaxGenerics;
 namespace FindMaxGenericsTest
 {
-    public class Tests
+    public class IntTests
     {
         FindMaxGeneric intMax = new FindMaxGeneric();
 
