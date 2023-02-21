@@ -12,5 +12,12 @@ namespace FindMaxGenericsTest
             Assert.AreEqual(11, result);
             Assert.Pass();
         }
+        [Test]
+        public void MaximumInt_WhenSecondGivenValueIsMax()
+        {
+            int result = intMax.FindMaximum<int>(11, 12, 9);
+            Assert.AreEqual(12, result);
+            Assert.Pass();
+        }
     }
 }
