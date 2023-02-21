@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FindMaxGenerics
 {
-    public class FindMaxGeneric
+    public class FindMaxGeneric<T> where T : IComparable
     {
-        public T FindMaximum<T>(T firstValue, T secondValue, T thirdValue)where T : IComparable
+        public T FindMaximum(T firstValue, T secondValue, T thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
                 return firstValue;
