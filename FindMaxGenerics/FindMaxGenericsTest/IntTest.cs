@@ -1,15 +1,15 @@
+using FindMaxGenerics;
 namespace FindMaxGenericsTest
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
+        FindMaxGeneric intMax = new FindMaxGeneric();
 
         [Test]
-        public void Test1()
+        public void MaximumInt_WhenFirstGivenValueIsMax()
         {
+            int result = intMax.FindMaximum<int>(11,10,9);
+            Assert.AreEqual(11, result);
             Assert.Pass();
         }
     }
