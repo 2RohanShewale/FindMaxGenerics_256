@@ -18,5 +18,12 @@ namespace FindMaxGenericsTest
             Assert.AreEqual(17.03, result);
             Assert.Pass();
         }
+        [Test]
+        public void MaximumDouble_WhenThirdGivenValueIsMax()
+        {
+            double result = doubleMax.FindMaximum<double>(15.1, 17.03, 20.01);
+            Assert.That(result, Is.EqualTo(20.01));
+            Assert.Pass();
+        }
     }
 }
