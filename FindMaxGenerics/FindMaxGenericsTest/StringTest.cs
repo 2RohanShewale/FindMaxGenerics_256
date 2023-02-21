@@ -9,25 +9,27 @@ namespace FindMaxGenericsTest
 {
     public class StringTest
     {
-        FindMaxGeneric str = new FindMaxGeneric();
         [Test]
         public void MaximumString_WhenFirstGivenValueIsMax()
         {
-            string result = str.FindMaximum<string>("Peach", "Banana", "Apple");
+            FindMaxGeneric<string> str = new FindMaxGeneric<string>("Peach", "Banana", "Apple");
+            string result = str.FindMax();
             Assert.AreEqual("Peach", result);
             Assert.Pass();
         }
         [Test]
         public void MaximumString_WhenStringGivenValueIsMax()
         {
-            string result = str.FindMaximum<string>("Banana", "Peach", "Apple");
+            FindMaxGeneric<string> str = new FindMaxGeneric<string>("Banana", "Peach", "Apple");
+            string result = str.FindMax();         
             Assert.AreEqual("Peach", result);
             Assert.Pass();
         }
         [Test]
         public void MaximumString_WhenThirdGivenValueIsMax()
         {
-            string result = str.FindMaximum<string>("Peach", "Banana", "Zebra");
+            FindMaxGeneric<string> str = new FindMaxGeneric<string>("Banana", "Peach", "Zebra");
+            string result = str.FindMax();
             Assert.AreEqual("Zebra", result);
             Assert.Pass();
         }

@@ -3,26 +3,28 @@ namespace FindMaxGenericsTest
 {
     public class IntTests
     {
-        FindMaxGeneric intMax = new FindMaxGeneric();
 
         [Test]
         public void MaximumInt_WhenFirstGivenValueIsMax()
         {
-            int result = intMax.FindMaximum<int>(11,10,9);
+            FindMaxGeneric<int> intMax = new FindMaxGeneric<int>(11, 10, 9);
+            int result = intMax.FindMax();
             Assert.AreEqual(11, result);
             Assert.Pass();
         }
         [Test]
         public void MaximumInt_WhenSecondGivenValueIsMax()
         {
-            int result = intMax.FindMaximum<int>(11, 12, 9);
+            FindMaxGeneric<int> intMax = new FindMaxGeneric<int>(11, 12, 9);
+            int result = intMax.FindMax();
             Assert.AreEqual(12, result);
             Assert.Pass();
         }
         [Test]
         public void MaximumInt_WhenThirdGivenValueIsMax()
         {
-            int result = intMax.FindMaximum<int>(11, 12, 13);
+            FindMaxGeneric<int> intMax = new FindMaxGeneric<int>(11, 12, 13);
+            int result = intMax.FindMax();
             Assert.AreEqual(13, result);
             Assert.Pass();
         }
