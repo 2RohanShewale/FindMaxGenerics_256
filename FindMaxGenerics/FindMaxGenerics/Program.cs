@@ -10,8 +10,14 @@ namespace FindMaxGenerics
     {
         static void Main(string[] args)
         {
-            FindMax stringLast = new FindMax();
-            Console.WriteLine($"string : {stringLast.FindMaximum("Banana", "Peach", "Apple")}");
+            FindMaxGeneric intMax = new FindMaxGeneric();
+            FindMaxGeneric doubleMax = new FindMaxGeneric();
+            FindMaxGeneric strMax = new FindMaxGeneric();
+
+            Console.WriteLine($"Max Int: {intMax.FindMaximum(10,20,30)} ");
+            Console.WriteLine($"Max double: {doubleMax.FindMaximum(10.4, 20.3, 30.2)} ");
+            Console.WriteLine($"Max string: {strMax.FindMaximum("Banana", "Peach", "Apple")} ");
+
             Console.ReadKey();
         }
     }
