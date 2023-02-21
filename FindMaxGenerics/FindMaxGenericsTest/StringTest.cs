@@ -17,5 +17,12 @@ namespace FindMaxGenericsTest
             Assert.AreEqual("Peach", result);
             Assert.Pass();
         }
+        [Test]
+        public void MaximumString_WhenStringGivenValueIsMax()
+        {
+            string result = str.FindMaximum<string>("Banana", "Peach", "Apple");
+            Assert.AreEqual("Peach", result);
+            Assert.Pass();
+        }
     }
 }
