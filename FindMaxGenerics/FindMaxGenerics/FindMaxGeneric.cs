@@ -8,27 +8,27 @@ namespace FindMaxGenerics
 {
     public class FindMaxGeneric<T> where T : IComparable
     {
-        private T firstValue, secondValue, thirdValue;
-        public FindMaxGeneric(T firstValue, T secondValue, T thirdValue)
+        public T[] values;
+        public FindMaxGeneric(params T[] values)
         {
-            this.firstValue = firstValue;
-            this.secondValue = secondValue;
-            this.thirdValue = thirdValue;
+            this.values = values;
         }
 
-        private T FindMaximum(T firstValue, T secondValue, T thirdValue)
+        private T FindMaximum(params T[] values)
         {
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
-                return firstValue;
-            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
-                return secondValue;
-            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
-                return thirdValue;
-            return firstValue;
+            T max = values[0];
+            for (int i = 1; i < values.Length; i++)
+            {
+                if (values[i].CompareTo(max) > 0)
+                {
+                    max = values[i];
+                }
+            }
+            return max;
         }
         public T FindMax()
         {
-            return FindMaximum(firstValue, secondValue, thirdValue);
+            return FindMaximum(values);
         }
    
     }
